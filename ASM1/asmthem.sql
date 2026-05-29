@@ -10,6 +10,8 @@ from
 
     --------------------
 
+
+
     
 SELECT 
     o.OrderID AS [Mã Đơn Hàng],
@@ -59,3 +61,15 @@ e.Title AS [Chức Vụ],
 m.FirstName + ' ' + m.LastName AS [Tên Người Quản Lý]
 from dbo.Employees e
 left join dbo.Employees m on e.ReportsTo = m.EmployeeID
+
+--------------------------------
+
+------------
+SELECT 
+    FirstName + ' ' + LastName AS [Tên Nhân Viên],
+    HireDate AS [Ngày Tuyển Dụng],
+    Year(HireDate) -year (BirthDate) AS [Tuổi Tuyển Dụng]
+FROM dbo.Employees;
+
+---------------------
+
